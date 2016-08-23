@@ -1,0 +1,17 @@
+setwd(Directory)
+read.csv("hm1.csv")
+
+#Column containing Ozone data
+Ozone<-a$Ozone
+
+#Where are NA
+x<-is.na(Ozone)
+y<-Ozone[!x]
+y[y>31]
+
+#Complete Cases
+x<-complete.cases(Ozone)
+#Remove NA
+y<-Ozone[x]
+y[y>31]
+
